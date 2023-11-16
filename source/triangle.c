@@ -6,7 +6,7 @@ void display() {
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT);
 
-  // Start drawing a triangle.
+  // Draw the roof of the hut
   glBegin(GL_TRIANGLES);
 
     // Set the color of the first vertex to red.
@@ -20,8 +20,6 @@ void display() {
     // Set the color of the third vertex to blue.
     glColor3f(0.0f, 0.0f, 1.0f);
     glVertex2f(0.0f, 0.8f);
-
-  // Finish drawing the triangle.
   glEnd();
 
   // Swap the buffers so that the drawing is displayed on the screen.
@@ -36,7 +34,7 @@ int main(int argc, char** argv) {
   glutInitDisplayMode(GLUT_SINGLE);
   glutInitWindowSize(500, 500);
   glutInitWindowPosition(100, 100);
-  glutCreateWindow("OpenGL Triangle");
+  glutCreateWindow("Colored triangle");
 
   // Set the display callback function.
   glutDisplayFunc(display);
@@ -46,3 +44,4 @@ int main(int argc, char** argv) {
 
   return 0;
 }
+
